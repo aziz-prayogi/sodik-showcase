@@ -10,16 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main class="landing">
+    <!-- Page 1: Hero/Home -->
+    <section class="page page-hero" aria-labelledby="hero-title">
         <div class="container">
             <div class="hero">
-                    <div class="bg-circle bg-circle-1"></div>
-                    <div class="bg-circle bg-circle-2"></div>
                 <div class="hero-bg-decor" aria-hidden="true">
- 
                 </div>
                 <div class="hero-content">
-                    <h1 class="hero-title">
+                    <div class="bg-circle bg-circle-1"></div>
+                    <div class="bg-circle bg-circle-2"></div>
+                    <h1 id="hero-title" class="hero-title">
                         <span class="hero-title-line">Kirim Paket Aman, &</span>
                         <span class="hero-title-line highlight">Cepat bersama sodik</span>
                     </h1>
@@ -32,6 +32,16 @@
                     <img src="source/Untitled_Design-removebg-preview.png" alt="Sodik Mobile delivery illustration" class="hero-image">
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Page 2: Features (Full Screen - Original Small Cards) -->
+    <section class="page page-features" aria-labelledby="features-title">
+        <div class="container">
+            <header class="section-header">
+                <h2 id="features-title" class="section-title">Fitur Unggulan</h2>
+                <p class="section-subtitle">Solusi lengkap untuk pengiriman yang aman, cepat, dan terpercaya</p>
+            </header>
             
             <div class="features">
                 <div class="feature-card">
@@ -64,6 +74,140 @@
                 </div>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- Page 3: Payment Partners -->
+    <section class="page page-payment" aria-labelledby="payment-partners-title">
+        <div class="container">
+            <header class="section-header">
+                <h2 id="payment-partners-title" class="section-title">Kepercayaan & Mitra Pembayaran Terintegrasi</h2>
+                <p class="section-subtitle">Didukung oleh Mitra Resmi yang Aman & Terpercaya</p>
+            </header>
+
+            <div class="payment-grid">
+                <!-- QRIS Digital -->
+                <article class="payment-category">
+                    <div class="category-header">
+                        <div class="category-icon qris">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                <rect x="3" y="14" width="7" height="7" rx="1"/>
+                                <rect x="14" y="14" width="7" height="7" rx="1"/>
+                                <rect x="8" y="8" width="8" height="8" rx="1"/>
+                            </svg>
+                        </div>
+                        <div class="category-info">
+                            <h3 class="category-title">QRIS Digital</h3>
+                            <p class="category-desc">Pembayaran cepat via e-wallet & mobile banking</p>
+                        </div>
+                    </div>
+                    <ul class="payment-methods" role="list">
+                        <li class="payment-method">
+                            <span class="method-name">GoPay</span>
+                            <span class="method-badge">Aktif</span>
+                        </li>
+                        <li class="payment-method">
+                            <span class="method-name">OVO</span>
+                            <span class="method-badge">Aktif</span>
+                        </li>
+                        <li class="payment-method">
+                            <span class="method-name">DANA</span>
+                            <span class="method-badge">Aktif</span>
+                        </li>
+                        <li class="payment-method">
+                            <span class="method-name">ShopeePay</span>
+                            <span class="method-badge">Aktif</span>
+                        </li>
+                        <li class="payment-method">
+                            <span class="method-name">LinkAja</span>
+                            <span class="method-badge">Aktif</span>
+                        </li>
+                        <li class="payment-method">
+                            <span class="method-name">Mobile Banking</span>
+                            <span class="method-badge">Aktif</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- Bank Virtual Accounts -->
+                <article class="payment-category">
+                    <div class="category-header">
+                        <div class="category-icon bank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M4 6h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/>
+                                <path d="M8 12h8M8 16h5"/>
+                            </svg>
+                        </div>
+                        <div class="category-info">
+                            <h3 class="category-title">Bank Virtual Accounts</h3>
+                            <p class="category-desc">Transfer via virtual account bank resmi</p>
+                        </div>
+                    </div>
+                    <ul class="payment-methods" role="list">
+                        <li class="payment-method">
+                            <span class="method-name">BCA</span>
+                            <span class="method-badge">Aktif</span>
+                        </li>
+                        <li class="payment-method">
+                            <span class="method-name">Mandiri</span>
+                            <span class="method-badge">Aktif</span>
+                        </li>
+                        <li class="payment-method">
+                            <span class="method-name">BNI</span>
+                            <span class="method-badge">Aktif</span>
+                        </li>
+                        <li class="payment-method">
+                            <span class="method-name">BRI</span>
+                            <span class="method-badge">Aktif</span>
+                        </li>
+                        <li class="payment-method">
+                            <span class="method-name">BSI</span>
+                            <span class="method-badge">Aktif</span>
+                        </li>
+                        <li class="payment-method">
+                            <span class="method-name">CIMB Niaga</span>
+                            <span class="method-badge">Aktif</span>
+                        </li>
+                        <li class="payment-method">
+                            <span class="method-name">Permata</span>
+                            <span class="method-badge">Aktif</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- Cash Payment Options -->
+                <article class="payment-category">
+                    <div class="category-header">
+                        <div class="category-icon cash">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <div class="category-info">
+                            <h3 class="category-title">Opsi Pembayaran Tunai</h3>
+                            <p class="category-desc">Fleksibilitas bayar di tempat atau titik resmi</p>
+                        </div>
+                    </div>
+                    <ul class="payment-methods" role="list">
+                        <li class="payment-method">
+                            <span class="method-name">Cash on Delivery (COD)</span>
+                            <span class="method-badge">Tersedia</span>
+                        </li>
+                        <li class="payment-method">
+                            <span class="method-name">Cash on Pickup</span>
+                            <span class="method-badge">Tersedia</span>
+                        </li>
+                        <li class="payment-method">
+                            <span class="method-name">Titik Pembayaran Resmi</span>
+                            <span class="method-badge">Tersedia</span>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+
+        </div>
+    </section>
 </body>
 </html>
