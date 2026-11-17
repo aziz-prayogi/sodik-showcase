@@ -12,7 +12,15 @@
     --color-forest: #064c2c;
     --color-forest-light: #0a6b3a;
     --color-secondary: #E65100;
-    --color-accent: #1565C0;
+    --color-sand: #F4E7D3;
+    --color-sand-dark: #E8D5C4;
+    --color-sand-light: #FAF3EB;
+    --color-sky: #1976D2;
+    --color-sky-light: #E3F2FD;
+    --color-sky-dark: #1565C0;
+    --color-gold: #FFD700;
+    --color-gold-light: #FFF8E1;
+    --color-white: #FFFFFF;
     --color-text: #1a1a1a;
     --color-text-muted: #4a4a4a;
     --color-bg: #ffffff;
@@ -142,6 +150,16 @@ body {
     color: var(--color-primary);
 }
 
+.hero-tagline {
+    font-size: clamp(16px, 2vw, 18px);
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--color-forest);
+    margin-bottom: var(--spacing-md);
+    max-width: 480px;
+    font-style: italic;
+}
+
 .hero-description {
     font-size: clamp(14px, 1.5vw, 16px);
     font-weight: 400;
@@ -198,7 +216,7 @@ body {
 
 /* ===== PAGE 2: FEATURES (Full Screen - Original Small Cards) ===== */
 .page-features {
-    background: var(--color-bg);
+    background: var(--color-sand);
     display: flex;
     flex-direction: column;
 }
@@ -271,9 +289,8 @@ body {
     margin-bottom: var(--spacing-md);
 }
 
-.feature-icon svg {
-    width: 24px;
-    height: 24px;
+.feature-icon i {
+ font-size: 32px;
 }
 
 .feature-card h3 {
@@ -309,7 +326,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
     flex: 1;
     align-items: start;
 }
@@ -349,7 +366,7 @@ body {
 }
 
 .category-icon.qris {
-    background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-forest-light) 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
 }
 
 .category-icon.bank {
@@ -357,12 +374,11 @@ body {
 }
 
 .category-icon.cash {
-    background: linear-gradient(135deg, var(--color-secondary) 0%, #b71c1c 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
 }
 
-.category-icon svg {
-    width: 28px;
-    height: 28px;
+.category-icon i {
+    font-size: 2em;
 }
 
 .category-info {
@@ -450,10 +466,231 @@ body {
     flex-shrink: 0;
 }
 
+/* ===== PAGE 4: ECOSYSTEM (Value Added) ===== */
+.page-ecosystem {
+    background: var(--color-sand);
+    display: flex;
+    flex-direction: column;
+}
+
+.page-ecosystem .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.ecosystem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    flex: 1;
+    align-items: stretch;
+    margin-bottom: var(--spacing-xl);
+}
+
+.ecosystem-card {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(0,0,0,0.06);
+    overflow: hidden;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: var(--shadow-sm);
+}
+
+.ecosystem-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(25, 118, 210, 0.15);
+}
+
+.card-visual {
+    position: relative;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.ecosystem-card:nth-child(1) .card-visual {
+    background: linear-gradient(135deg, var(--color-sky-light) 0%, #BBDEFB 100%);
+}
+
+.ecosystem-card:nth-child(2) .card-visual {
+    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+}
+
+.ecosystem-card:nth-child(3) .card-visual {
+    background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+}
+
+.card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.95);
+    box-shadow: var(--shadow-md);
+    font-size: 28px;
+    color: var(--color-sky);
+    z-index: 2;
+    transition: var(--transition);
+}
+
+.ecosystem-card:nth-child(2) .card-icon {
+    color: var(--color-primary);
+}
+
+.ecosystem-card:nth-child(3) .card-icon {
+    color: var(--color-secondary);
+}
+
+.ecosystem-card:hover .card-icon {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-badge {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: rgba(0,0,0,0.6);
+    color: var(--color-white);
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(4px);
+}
+
+.card-content {
+    padding: var(--spacing-md) var(--spacing-md) calc(var(--spacing-md) + var(--spacing-xs));
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.3;
+}
+
+.card-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-md);
+}
+
+.card-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    flex: 1;
+    margin-bottom: var(--spacing-lg);
+}
+
+.card-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    font-size: 13px;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+.card-features i {
+    color: var(--color-sky);
+    font-size: 12px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.ecosystem-card:nth-child(2) .card-features i {
+    color: var(--color-primary);
+}
+
+.ecosystem-card:nth-child(3) .card-features i {
+    color: var(--color-secondary);
+}
+
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-sky);
+    text-decoration: none;
+    transition: var(--transition);
+    padding-top: var(--spacing-xs);
+    border-top: 1px solid rgba(0,0,0,0.04);
+}
+
+.ecosystem-card:nth-child(2) .card-link {
+    color: var(--color-primary);
+}
+
+.ecosystem-card:nth-child(3) .card-link {
+    color: var(--color-secondary);
+}
+
+.card-link:hover {
+    gap: var(--spacing-sm);
+}
+
+.ecosystem-footer {
+    text-align: center;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.footer-text {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-md);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--color-white);
+    color: var(--color-sky);
+    border: 2px solid var(--color-sky);
+    border-radius: var(--radius-md);
+    font-family: var(--font-main);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-secondary:hover {
+    background: var(--color-sky);
+    color: var(--color-white);
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
     .features,
-    .payment-grid {
+    .payment-grid,
+    .ecosystem-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
     }
@@ -555,19 +792,58 @@ body {
     }
     
     .assurance-item {
-        font-size: 13px;
-        padding: var(--spacing-xs) var(--spacing-sm);
+            font-size: 13px;
+            padding: var(--spacing-xs) var(--spacing-sm);
+        }
+
+        .assurance-item svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .ecosystem-card {
+            padding: var(--spacing-md);
+        }
+
+        .card-visual {
+            height: 120px;
+        }
+
+        .card-icon {
+            width: 56px;
+            height: 56px;
+            font-size: 22px;
+        }
+
+        .card-title {
+            font-size: 18px;
+        }
+
+        .card-desc {
+            font-size: 13px;
+        }
+
+        .card-features li {
+            font-size: 12px;
+        }
+
+        .card-link {
+            font-size: 13px;
+        }
+
+        .footer-text {
+            font-size: 13px;
+        }
+
+        .btn-secondary {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .section-header {
+            margin-bottom: var(--spacing-lg);
+        }
     }
-    
-    .assurance-item svg {
-        width: 18px;
-        height: 18px;
-    }
-    
-    .section-header {
-        margin-bottom: var(--spacing-lg);
-    }
-}
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
